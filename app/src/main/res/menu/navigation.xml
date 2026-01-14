@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item  android:id="@+id/navigation_today"
+        android:icon="@drawable/menu_today_icon"
+        android:title="Today"/>
+
+    <item android:id="@+id/navigation_schedule"
+        android:icon="@drawable/menu_schedule_icon"
+        android:title="Schedule"/>
+</menu>

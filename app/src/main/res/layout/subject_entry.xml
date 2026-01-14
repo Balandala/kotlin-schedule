@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:padding="8dp"
+    android:background="@drawable/rounded_subject_background">
+
+    <TextView
+        android:id="@+id/subject_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25sp"
+        android:text="1"/>
+
+    <TextView
+        android:id="@+id/subject_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/subject_num"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="18sp"
+        android:text="08:00"/>
+
+    <TextView
+        android:id="@+id/subject_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/subject_num"
+        app:layout_constraintTop_toBottomOf="@id/subject_start_time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="18sp"
+        android:text="09:30"/>
+
+    <TextView
+        android:id="@+id/subject_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/subject_start_time"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Анализ данных"/>
+
+    <TextView
+        android:id="@+id/subject_classroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/subject_start_time"
+        app:layout_constraintTop_toBottomOf="@id/subject_name"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="20sp"
+        android:text="132"/>
+
+    <TextView
+        android:id="@+id/subject_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/subject_classroom"
+        app:layout_constraintTop_toBottomOf="@id/subject_name"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="20sp"
+        android:text="Мирасов В.Ф."/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
