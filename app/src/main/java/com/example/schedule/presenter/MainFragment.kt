@@ -1,4 +1,4 @@
-package com.example.schedule
+package com.example.schedule.presenter
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
+import com.example.schedule.R
 import com.example.schedule.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -36,7 +37,8 @@ class MainFragment : Fragment() {
         navHostId ?: return
         val transaction = childFragmentManager.beginTransaction()
         when (id) {
-            //R.id.navigation_today ->
+            R.id.navigation_today ->
+                transaction.replace(navHostId, TodayFragment.newInstance())
 
             R.id.navigation_schedule ->
                 transaction.replace(navHostId, ScheduleFragment.newInstance())
@@ -44,13 +46,15 @@ class MainFragment : Fragment() {
         transaction.commit()
     }
 
-
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
+    }
 
     companion object {
         @JvmStatic
         fun newInstance() =
             MainFragment().apply {
-
             }
     }
 }
